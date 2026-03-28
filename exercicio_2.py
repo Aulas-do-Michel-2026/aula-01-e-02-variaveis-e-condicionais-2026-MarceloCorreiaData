@@ -13,3 +13,12 @@ Digite o peso do paciente (em kg):
 Resposta:
 Média: 140 mg
 """
+
+def calcular_dose():
+    peso = float(input("Digite o peso do paciente (em kg): "))
+    dose = peso * 2
+    
+    return dose
+    
+
+print(f"Dose: {calcular_dose():.2f} mg")
