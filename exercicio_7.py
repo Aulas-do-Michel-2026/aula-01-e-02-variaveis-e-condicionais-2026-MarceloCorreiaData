@@ -91,8 +91,7 @@ Tente, se não der, olhe lá!
 
 
 def analisar_variante():
-    print("Vou analisar se uma variante genética é relevante para investigação.")
-    frequencia_populacional = int(input("Digite a frequência populacional da variante (em porcentagem): "))
+    frequencia_populacional = int(input("Vou analisar se uma variante genética é relevante. Digite a frequência populacional da variante (em porcentagem): "))
     gene = input("Digite o gene da variante (genes de exceção: HFE, MEFV, GJB2): ").upper()
     impacto = input("Digite o impacto da variante (ALTO ou BAIXO): ").upper()
     reads = int(input("Digite a quantidade de reads da variante: "))

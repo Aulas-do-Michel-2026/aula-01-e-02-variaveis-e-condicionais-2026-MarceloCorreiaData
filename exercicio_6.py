@@ -55,17 +55,17 @@ Não temos essa moeda em caixa.
 
 
 def converter_moeda():
-    pais = input("Qual país você vai viajar? ").lower().strip()
+    pais = input("Qual país você vai viajar? ")
 
-    if pais == "estados unidos":
+    if pais == "Estados Unidos":
         reais = float(input("Quantos reais você quer converter? "))
-        return f"Você receberá {reais / 5:.2f} USD"
-    elif pais == "argentina":
+        return f"{reais / 5:.2f} USD"
+    elif pais == "Argentina":
         reais = float(input("Quantos reais você quer converter? "))
-        return f"Você receberá {reais * 180:.2f} ARS"
-    elif pais == "japão" or pais == "japao":
+        return f"{reais * 180:.2f} ARS"
+    elif pais == "Japão":
         reais = float(input("Quantos reais você quer converter? "))
-        return f"Você receberá {reais * 30:.2f} JPY"
+        return f"{reais * 30:.2f} JPY"
     else:
         return "Não temos essa moeda em caixa."
 
