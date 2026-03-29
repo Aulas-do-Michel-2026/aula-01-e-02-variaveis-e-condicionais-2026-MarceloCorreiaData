@@ -55,3 +55,20 @@ Resposta:
 Não
 
 """
+
+
+def verificar_brca1_v2():
+    cromossomo = input("Digite o cromossomo da variante. Vou investigar se está no gene BRCA1: ")
+    posicao = int(input("Digite a posição dessa variante: "))
+    genoma = input("Digite o genoma de referência (hg19 ou hg38): ")
+
+    if cromossomo == "chr17":
+        if genoma == "hg19" and 41196312 <= posicao <= 41277500:
+            return "Sim, a variante está no BRCA1."
+        elif genoma == "hg38" and 43044295 <= posicao <= 43125483:
+            return "Sim, a variante está no BRCA1."
+
+    return "Não, a variante não está no BRCA1."
+
+
+print(verificar_brca1_v2())

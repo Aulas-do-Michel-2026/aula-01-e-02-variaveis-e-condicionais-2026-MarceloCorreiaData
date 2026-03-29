@@ -32,4 +32,3 @@ def calcular_media():
 
 
 print(f"Média: {calcular_media():.2f}")
-

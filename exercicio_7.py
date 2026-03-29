@@ -88,3 +88,26 @@ Esse exercício está com uma resolução no notebook da aula.
 
 Tente, se não der, olhe lá!
 """
+
+
+def analisar_variante():
+    print("Vou analisar se uma variante genética é relevante para investigação.")
+    frequencia_populacional = int(input("Digite a frequência populacional da variante (em porcentagem): "))
+    gene = input("Digite o gene da variante (genes de exceção: HFE, MEFV, GJB2): ").upper()
+    impacto = input("Digite o impacto da variante (ALTO ou BAIXO): ").upper()
+    reads = int(input("Digite a quantidade de reads da variante: "))
+    frequencia_alelica = int(input("Digite a frequência alélica da variante (em porcentagem): "))
+
+    genes_de_excecao = (gene == 'HFE') or (gene == 'MEFV') or (gene == 'GJB2')
+
+    if (reads < 10) or (frequencia_alelica < 20):
+        return "Não é relevante, deve ser artefato."
+    elif impacto != "ALTO":
+        return "Não é relevante."
+    elif (frequencia_populacional > 5) and not genes_de_excecao:
+        return "Não é relevante."
+    else:
+        return "É relevante."
+
+
+print(analisar_variante())

@@ -14,6 +14,7 @@ Resposta:
 Média: 140 mg
 """
 
+
 def calcular_dose():
     peso = float(input("Digite o peso do paciente (em kg): "))
     dose = peso * 2

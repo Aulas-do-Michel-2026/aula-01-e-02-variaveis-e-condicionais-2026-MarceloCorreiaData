@@ -17,3 +17,15 @@ Digite um número:
 
 Dica: Lembre do comando de resto da divisão inteira!
 """
+
+
+def verificar_paridade():
+    numero = int(input("Digite um número: "))
+
+    if numero % 2 == 0:
+        return "Par"
+    else:
+        return "Ímpar"
+
+
+print(verificar_paridade())
